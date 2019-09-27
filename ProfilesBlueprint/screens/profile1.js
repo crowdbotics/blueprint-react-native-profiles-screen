@@ -24,6 +24,7 @@ class _ProfileV1 extends React.Component {
   };
   static navigationOptions = {
     title: 'User Profile'.toUpperCase(),
+    headerBackTitle: null,
   };
 
   state = {
@@ -39,7 +40,7 @@ class _ProfileV1 extends React.Component {
   
 
   render = () => {
-    const {themedStyle} = this.props
+    const {themedStyle, navigation} = this.props
     return (
     <ScrollView style={themedStyle.root}>
       <View style={[themedStyle.header, themedStyle.bordered]}>
@@ -65,7 +66,7 @@ class _ProfileV1 extends React.Component {
         <View style={themedStyle.separator} />
         <Button style={themedStyle.button} appearance='ghost' status='danger'>MESSAGE</Button>
       </View>
-      <Gallery items={this.state.data.images} />
+      <Gallery items={this.state.data.images} navigation={navigation}/>
 
      
     </ScrollView>
@@ -80,7 +81,7 @@ export default ProfileV1 = withStyles(_ProfileV1, theme => ({
     alignItems: 'center',
     paddingTop: 25,
     paddingBottom: 17,
-    marginTop: 20
+    // paddingTop: 20
   },
   userInfo: {
     flexDirection: 'row',

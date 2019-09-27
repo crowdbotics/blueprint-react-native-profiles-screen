@@ -14,7 +14,25 @@ export default class Root extends PureComponent {
         <Button
           onPress={() => this.props.navigation.navigate('Profile1')}
           style={styles.item}>
-          Profile V1 
+          Profile V1
+        </Button>
+
+        <Button
+          onPress={() => this.props.navigation.navigate('Profile2')}
+          style={styles.item}>
+          Profile V2
+        </Button>
+
+        <Button
+          onPress={() => this.props.navigation.navigate('Profile3')}
+          style={styles.item}>
+          Profile V3
+        </Button>
+
+        <Button
+          onPress={() => this.props.navigation.navigate('SlideShow')}
+          style={styles.item}>
+          Photo Slide Show
         </Button>
 
         <Button

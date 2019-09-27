@@ -29,11 +29,16 @@ export class Gallery extends React.Component {
 
   extractItemKey = index => `${index}`;
 
+  openSlideShow = index => {
+    this.props.navigation.navigate('SlideShow', { index })
+  }
 
+  
 
   renderItem = ({ item, index }) => (
     <React.Fragment>
       <TouchableOpacity
+        onPress={this.openSlideShow.bind(this, index)}
       >
         <Image
           style={{
