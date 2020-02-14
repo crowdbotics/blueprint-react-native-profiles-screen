@@ -7,7 +7,7 @@ import SlideShow from "./screens/slideShow";
 
 import Home from "./screens";
 
-export const ProfilesBlueprintNavigator = createStackNavigator(
+export default ProfilesBlueprintNavigator = createStackNavigator(
   {
     Home: { screen: Home },
     Profile1: { screen: Profile1 },
